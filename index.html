@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Well Soon!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", cursive;
+      text-align: center;
+      background: #ffd6e0;
+      background-image: radial-gradient(circle at 30% 30%, #fff 20px, transparent 21px),
+                        radial-gradient(circle at 70% 70%, #fff 20px, transparent 21px);
+      background-size: 100px 100px;
+      background-repeat: repeat;
+      animation: floatClouds1 25s infinite linear, floatClouds2 35s infinite linear;
+    }
+
+    @keyframes floatClouds1 {
+      0% {background-position: 0 0, 0 0;}
+      50% {background-position: 30px 20px, -30px -20px;}
+      100% {background-position: 0 0, 0 0;}
+    }
+
+    @keyframes floatClouds2 {
+      0% {background-position: 0 0, 0 0;}
+      50% {background-position: -20px 30px, 20px -30px;}
+      100% {background-position: 0 0, 0 0;}
+    }
+
+    h1.heading {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      color: #ff6a9e;
+      font-style: italic;
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% {text-shadow: 0 0 5px #ffb3c6, 0 0 10px #ffb3c6;}
+      50% {text-shadow: 0 0 15px #ff8aa0, 0 0 25px #ff8aa0;}
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .flashcard {
+      width: 180px;
+      height: 240px;
+      perspective: 800px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .flashcard:hover {
+      transform: translateY(-10px);
+    }
+
+    .flashcard div {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      backface-visibility: hidden;
+      transition: transform 0.6s, box-shadow 0.3s;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      background: white;
+      color: #ff6a9e;
+      font-style: italic;
+    }
+
+    .front {
+      z-index: 2;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      z-index: 1;
+    }
+
+    .flashcard.flipped .front {
+      transform: rotateY(180deg);
+      z-index: 1;
+    }
+
+    .flashcard.flipped .back {
+      transform: rotateY(360deg);
+      z-index: 2;
+    }
+
+    /* Floating sparkles */
+    .sparkles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.7) 2px, transparent 2px);
+      background-size: 60px 60px;
+      animation: sparkle 6s infinite ease-in-out;
+      opacity: 0.5;
+    }
+
+    @keyframes sparkle {
+      0% { opacity: 0.3; }
+      50% { opacity: 0.7; }
+      100% { opacity: 0.3; }
+    }
+    .subheading {
+      font-size: 1rem;
+      color: #ff8aa0;
+      font-style: italic;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+  <div class="sparkles"></div>
+  <h1 class="heading">Get Well Soon, Maryam!💗</h1>
+<h2 class="subheading">(click on the flashcards)</h2>
+  <div class="container">
+    <div class="flashcard" onclick="flipCard(this)"><div class="front"> princess card #1 </div><div class="back"> stay hydrated diva, we adore you so much <3 </div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front"> princess card #2 </div><div class="back"> take your meds barbie, your appendix will HATE your guts XD </div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front">princess card #3</div><div class="back">crazy to carry our family's first ever swollen appendix, youre such a warrior </div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front">princess card #4</div><div class="back">2025 nostalgia already goes crazy with maryam lore, 31 days to go, you gotta keep up for your 18th year, pretty </div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front">princess card #5</div><div class="back">your lame jokes ragebait the whole house, but let mubashshira be the ONLY wimpy sore loser for now. appendicitis has got NOTHING on you </div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front">princess card #6</div><div class="back">do NOT let your cool points drain, much luck for getting your intestines butchered up, queen.</div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front">princess card #7</div><div class="back">so competetively insane how you didnt let maarya be the most gastrically challenged sibling, im SO inspired.</div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front">princess card #8</div><div class="back">cant think of anything witty for this card, but mwehehe i would choose you to be my little sister in every lifetime.</div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front">princess card #9</div><div class="back">devour all the buldak supply of the world once you begin your appendix-free journey of life, love you always.</div></div>
+    <div class="flashcard" onclick="flipCard(this)"><div class="front">princess card #10</div><div class="back">youre so strong, im so proud of the young lady that you've grown up to become, maryam.</div></div>
+      
+  </div>
+  <script>
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+</body>
+</html>
